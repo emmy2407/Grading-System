@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grade score</title>
+	<script type="text/javascript">
+		var d;
+		function display() {
+			d = grade.value;
+			if (d < 40 && d !=''){
+				document.getElementById('content').innerHTML = "F";
+				document.getElementById('content').style.color = "red";
+			}else if (d < 50 && d !=''){
+				document.getElementById('content').innerHTML = "D";
+				document.getElementById('content').style.color = "yellow";
+			}else if (d < 60 && d !=''){
+				document.getElementById('content').innerHTML = "C";
+				document.getElementById('content').style.color = "blue";
+			}else if (d < 70 && d !=''){
+				document.getElementById('content').innerHTML = "B";
+				document.getElementById('content').style.color = "blue";
+			}else if (d < 100.1 && d !=''){
+				document.getElementById('content').innerHTML = "A";
+				document.getElementById('content').style.color = "green";
+			}else if (d > 100 && d !=''){
+				document.getElementById('content').innerHTML = "Out of range";
+			}else if (d <= 0 && d !=''){
+				document.getElementById('content').innerHTML = "Out of range";
+			}
+			if (d =='') {
+				document.getElementById('content').innerHTML = "Input a score";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1><b>Grading System</b></h1>
+
+	<input id="grade" type="number" name="" placeholder="Enter your score">
+	<button id="press" onclick="display()">click</button>
+	<hr>	
+
+	<div id="content" style="color: red; font-size: 50px;"></div>
+</body>
+</html>
